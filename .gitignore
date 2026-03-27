@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+output/figures/
+output/latex/*.aux
+output/latex/*.log
+output/latex/*.toc
+output/latex/*.out
+*.DS_Store
