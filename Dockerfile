@@ -10,4 +10,7 @@ RUN pip install --no-cache-dir .
 
 EXPOSE ${PORT:-8501}
 
-CMD ["sh", "-c", "streamlit run app/dashboard.py --server.port=${PORT:-8501} --server.address=0.0.0.0 --server.headless=true"]
+COPY start.sh .
+RUN chmod +x start.sh
+
+CMD ["./start.sh"]
