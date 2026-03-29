@@ -8,9 +8,4 @@ COPY app/ app/
 
 RUN pip install --no-cache-dir .
 
-EXPOSE ${PORT:-8501}
-
-COPY start.sh .
-RUN chmod +x start.sh
-
-CMD ["./start.sh"]
+CMD ["sh", "-c", "uvicorn app.dashboard:app --host 0.0.0.0 --port ${PORT:-8000}"]
